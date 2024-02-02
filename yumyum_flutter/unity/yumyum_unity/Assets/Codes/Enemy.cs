@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     GameManager gameManager;
 
     public MMF_Player getDamageFeedback;
+    public MMF_Player dieFeedback;
+    public GameObject goldParticle;
     public Slider healthSlider; // Reference to the Slider UI component
 
     // Start is called before the first frame update
@@ -69,6 +71,8 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        dieFeedback.PlayFeedbacks();
+        Instantiate(goldParticle, transform.position, Quaternion.identity);
         gameManager.isEnemyExist = false;
         gameManager.SpawnEnemy();
         gameManager.GetGold(Random.Range(1,5));
