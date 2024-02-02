@@ -64,15 +64,20 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-            isDead = true;
             Die();
         }
     }
 
     void Die()
     {
+        if (isDead) {
+            return;
+        }
+
+        isDead = true;
         dieFeedback.PlayFeedbacks();
-        Instantiate(goldParticle, transform.position, Quaternion.identity);
+        GameObject goldP = Instantiate(goldParticle, transform.position, Quaternion.identity);
+        Destroy(goldP, 1);
         gameManager.isEnemyExist = false;
         gameManager.SpawnEnemy();
         gameManager.GetGold(Random.Range(1,5));
