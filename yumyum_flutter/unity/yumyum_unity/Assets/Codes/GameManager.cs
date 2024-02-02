@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] enemies;
     public int stage = 0;
     public bool isEnemyExist = false;
+    public int gold = 0;
+
+    public TextMeshProUGUI stageText;
+    public TextMeshProUGUI goldText;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +20,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //ui update
+        stageText.text = stage.ToString();
+        goldText.text = gold.ToString();
     }
     public void SpawnEnemy() {
         StartCoroutine(SpawnEnemyAfterDelay(1f));
