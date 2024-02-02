@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MoreMountains.Feedbacks;
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
     private int hp;
     private bool isDead = false;
     GameManager gameManager;
+
+    public MMF_Player getDamageFeedback;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,10 @@ public class Enemy : MonoBehaviour
     }
     void GetDamage(int d) {
         hp -= d;
+        if (!getDamageFeedback.IsPlaying)
+        {
+            getDamageFeedback.PlayFeedbacks();
+        }
         //damage feedback
         if (hp < 0) {
             hp = 0;

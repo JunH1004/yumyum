@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179222c554003413c97141ce476bacb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkCoolTime: 0.3
+  atkCoolTime: 2
   atkTimer: 0
   bulletPrefab: {fileID: 7912704145963757846, guid: cf7ba9aafa6a74021a9de9c708cb4e84, type: 3}
   enemyPosition: {fileID: 2017747308}
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179222c554003413c97141ce476bacb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkCoolTime: 0.3
+  atkCoolTime: 3
   atkTimer: 0
   bulletPrefab: {fileID: 7912704145963757846, guid: cf7ba9aafa6a74021a9de9c708cb4e84, type: 3}
   enemyPosition: {fileID: 2017747308}
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179222c554003413c97141ce476bacb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkCoolTime: 0.3
+  atkCoolTime: 1
   atkTimer: 0
   bulletPrefab: {fileID: 7912704145963757846, guid: cf7ba9aafa6a74021a9de9c708cb4e84, type: 3}
   enemyPosition: {fileID: 2017747308}
