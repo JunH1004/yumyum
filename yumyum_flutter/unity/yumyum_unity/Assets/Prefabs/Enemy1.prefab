@@ -1161,6 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 20
   getDamageFeedback: {fileID: 8728831188842178347}
+  healthSlider: {fileID: 237412880740047473}
 --- !u!1 &8721498739074347940
 GameObject:
   m_ObjectHideFlags: 0
