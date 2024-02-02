@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 8515752223809298262}
   - component: {fileID: 3802284443714207539}
   m_Layer: 0
-  m_Name: Enemy2
+  m_Name: Enemy2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -829,7 +829,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 520a73897586442e491c8902892b6cf6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 330f145135a8a4ce6940a5c39c24ba6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -879,9 +879,9 @@ MonoBehaviour:
   goldParticle: {fileID: 1950537677007469001, guid: 0a0042fbc177f458f8a73c1bda1a57a0, type: 3}
   healthSlider: {fileID: 3594611077313465377}
   spriteRenderer: {fileID: 0}
-  normalSprite: {fileID: 21300000, guid: 520a73897586442e491c8902892b6cf6, type: 3}
-  damagedSprite: {fileID: 21300000, guid: b2311dd5e9d944a5f854a89dcaa10a67, type: 3}
-  startOffset: 0.5
+  normalSprite: {fileID: 21300000, guid: 330f145135a8a4ce6940a5c39c24ba6b, type: 3}
+  damagedSprite: {fileID: 21300000, guid: b1de55d4a7d5c44a78900559ac524620, type: 3}
+  startOffset: 0.7
 --- !u!61 &3802284443714207539
 BoxCollider2D:
   m_ObjectHideFlags: 0

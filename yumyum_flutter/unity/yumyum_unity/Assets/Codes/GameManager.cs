@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI stageText;
     public TextMeshProUGUI goldText;
+
+ 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,9 @@ public class GameManager : MonoBehaviour
         goldText.text = gold.ToString();
     }
     public void SpawnEnemy() {
+        if (isEnemyExist) {
+            return;
+        }
         StartCoroutine(SpawnEnemyAfterDelay(1f));
     }
     public void GetGold(int g) {
@@ -34,8 +39,8 @@ public class GameManager : MonoBehaviour
     {
         stage += 1;
         yield return new WaitForSeconds(delay);
-
-        Instantiate(enemies[0], transform.position, Quaternion.identity);
+        int index = Random.Range(0, enemies.Length);
+        Instantiate(enemies[index], transform.position, Quaternion.identity);
         isEnemyExist = true;
     }
 }
