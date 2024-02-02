@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemy() {
         StartCoroutine(SpawnEnemyAfterDelay(1f));
     }
+    public void GetGold(int g) {
+        gold += g;
+    }
     IEnumerator SpawnEnemyAfterDelay(float delay)
     {
         stage += 1;

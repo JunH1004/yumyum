@@ -71,6 +71,7 @@ public class Enemy : MonoBehaviour
     {
         gameManager.isEnemyExist = false;
         gameManager.SpawnEnemy();
+        gameManager.GetGold(Random.Range(1,5));
         Destroy(gameObject);
     }
 
