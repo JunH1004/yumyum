@@ -420,6 +420,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5585552028863922746, guid: 35da85e61997b4e3da47576d28d7eed7, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7912704145963757846, guid: 253f930f57a89430ebbc483776b36e8b, type: 3}
+    - target: {fileID: 5585552028863922746, guid: 35da85e61997b4e3da47576d28d7eed7, type: 3}
       propertyPath: enemyPosition
       value: 
       objectReference: {fileID: 2017747308}
@@ -759,6 +763,10 @@ PrefabInstance:
       propertyPath: atkCoolTime
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 5585552028863922746, guid: 35da85e61997b4e3da47576d28d7eed7, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7912704145963757846, guid: 20413432b0d2b4b6dbdb7b391c64b1db, type: 3}
     - target: {fileID: 5585552028863922746, guid: 35da85e61997b4e3da47576d28d7eed7, type: 3}
       propertyPath: enemyPosition
       value: 
