@@ -36,21 +36,6 @@ public class Hero : MonoBehaviour
         attackFeedback.PlayFeedbacks();
         // Instantiate the bullet and set its direction towards the enemy
         GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        newBullet.GetComponent<Bullet>().SetDirection(GetEnemyDirection());
-    }
-
-    Vector2 GetEnemyDirection()
-    {
-        // Assuming you have a reference to the enemy or its position
-        // You may need to replace this logic based on your actual game structure
-        if (enemyPosition != null)
-        {
-            return (Vector2)enemyPosition.position - (Vector2)transform.position;
-        }
-        else
-        {
-            // If there's no enemy position, return a default direction (you may want to handle this case appropriately)
-            return Vector2.right;
-        }
+        newBullet.GetComponent<Bullet>().SetTargetPosition(enemyPosition.position);
     }
 }
