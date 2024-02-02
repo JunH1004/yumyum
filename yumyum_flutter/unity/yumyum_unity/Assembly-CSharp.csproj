@@ -66,6 +66,8 @@
     <Compile Include="Assets/Codes/box.cs" />
     <Compile Include="Assets/Codes/card.cs" />
     <Compile Include="Assets/Codes/gaugeadd.cs" />
+    <Compile Include="Assets/Codes/BroBoss.cs" />
+    <Compile Include="Assets/Codes/broBossBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />

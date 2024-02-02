@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5585552028863922744}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7776268839229078062
 MonoBehaviour:
@@ -203,7 +203,7 @@ MonoBehaviour:
         AnimateScaleTarget: {fileID: 5585552028863922744}
         AnimateScaleDuration: 0.2
         RemapCurveZero: 0
-        RemapCurveOne: 0.04
+        RemapCurveOne: 0.01
         Offset: 0
         AnimateX: 1
         AnimateScaleTweenX:

@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        maxHp = maxHp + GameManager.stage * 2;
+        hp = maxHp;
         InitializeHealthSlider();
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = normalSprite;

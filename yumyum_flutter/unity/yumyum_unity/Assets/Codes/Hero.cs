@@ -24,7 +24,7 @@ public class Hero : MonoBehaviour
     {
         atkTimer += Time.deltaTime;
         
-        if (atkTimer >= atkCoolTime && gameManager.isEnemyExist)
+        if (atkTimer >= atkCoolTime && gameManager.isEnemyExist && !gameManager.isBroTime)
         {
             atkTimer = 0;
             Attack();
