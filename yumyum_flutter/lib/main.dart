@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 List<CameraDescription>? cameras;
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized()
+  WidgetsFlutterBinding.ensureInitialized();
   cameras = await availableCameras();
   runApp(const MyApp());
 }
