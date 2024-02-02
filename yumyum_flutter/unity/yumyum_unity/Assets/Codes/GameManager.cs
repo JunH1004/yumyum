@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] enemies;
-
+    public int stage = 0;
     public bool isEnemyExist = false;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator SpawnEnemyAfterDelay(float delay)
     {
+        stage += 1;
         yield return new WaitForSeconds(delay);
 
         Instantiate(enemies[0], transform.position, Quaternion.identity);

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MoreMountains.Feedbacks;
 public class Hero : MonoBehaviour
 {
     public float atkCoolTime;
@@ -11,6 +11,7 @@ public class Hero : MonoBehaviour
 
     public Transform enemyPosition;
 
+    public MMF_Player attackFeedback;
     GameManager gameManager;
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class Hero : MonoBehaviour
 
     void Attack()
     {
+        attackFeedback.PlayFeedbacks();
         // Instantiate the bullet and set its direction towards the enemy
         GameObject newBullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         newBullet.GetComponent<Bullet>().SetDirection(GetEnemyDirection());
