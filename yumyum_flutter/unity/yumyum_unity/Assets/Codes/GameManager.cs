@@ -5,9 +5,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public GameObject[] enemies;
-    public int stage = 0;
+    static public int stage = 0;
     public bool isEnemyExist = false;
-    public int gold = 0;
+    static public int gold = 0;
 
     public TextMeshProUGUI stageText;
     public TextMeshProUGUI goldText;
@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        stage = 0;
+        gold = 0;
         StartCoroutine(SpawnEnemyAfterDelay(0));
     }
 
