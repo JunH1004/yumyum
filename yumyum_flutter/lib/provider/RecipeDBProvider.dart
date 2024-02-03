@@ -26,12 +26,12 @@ class RecipeDBProvider {
   }
 
   // 레시피 ID를 이용하여 특정 레시피 얻기
-  Future<String> getRecipe(int id) async {
+  Future<String> getRecipe(int recipeID) async {
     // 여기에 특정 레시피를 가져오는 로직을 추가하세요
     List<Map<String, dynamic>> result = await _database.query('recipe',
         columns: ['recipe_name'],
         where: 'recipe_id = ?',
-        whereArgs: [id],
+        whereArgs: [recipeID],
         limit: 1);
 
     if (result.isNotEmpty) {

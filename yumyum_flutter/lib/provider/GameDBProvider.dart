@@ -25,10 +25,7 @@ class GameDBProvider {
   Future<int> getHeroID(int userID) async {
     // 여기에 특정 사용자의 영웅 ID를 가져오는 로직을 추가하세요
     List<Map<String, dynamic>> result = await _database.query('hero',
-        columns: ['hero_id'],
-        where: 'user_id = ?',
-        whereArgs: [userID],
-        limit: 1);
+        columns: ['hero_id'], where: 'user_id = ?', whereArgs: [userID]);
 
     if (result.isNotEmpty) {
       return result[0]['hero_id'] as int;
