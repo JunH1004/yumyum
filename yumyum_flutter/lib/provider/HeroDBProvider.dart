@@ -23,39 +23,60 @@ class HeroDBProvider {
     print('Hero Database initialized');
   }
 
-  // 모든 영웅 가져오기
-  Future<List<Map<String, dynamic>>> getAllHero() async {
-    // 여기에 모든 영웅을 가져오는 로직을 추가하세요
-    return await _database.query('hero');
+// 특정 영웅 가져오기
+  Future<Map<String, dynamic>> getHeroById(int heroID) async {
+    // 여기에 특정 영웅을 가져오는 로직을 추가하세요
+    List<Map<String, dynamic>> result = await _database.query(
+      'hero',
+      where: 'hero_id = ?', // hero_id에 해당하는 조건 추가
+      whereArgs: [heroID], // hero_id 값을 전달
+      limit: 1,
+    );
+
+    if (result.isNotEmpty) {
+      return result[0];
+    } else {
+      return {}; // 혹은 null을 반환하거나 적절한 예외를 던질 수 있습니다.
+    }
   }
 
   // 영웅 추가
-  Future<void> insertHero(String name, int level) async {
+  Future<void> insertHero(
+      int heroID, String heroName, int heroLevel, int heroDamage) async {
     // 여기에 영웅을 추가하는 로직을 추가하세요
-    await _database.insert('hero', {'hero_name': name, 'hero_level': level});
-    print('Hero added: Name - $name, Level - $level');
+    await _database.insert('hero', {
+      'hero_id': heroID,
+      'hero_name': heroName,
+      'hero_level': heroLevel,
+      'hero_damage': heroDamage
+    });
+    print(
+        'Hero added: ID - $heroID Name - $heroName, Level - $heroLevel, Damage - $heroDamage');
   }
 
   // 영웅 레벨 업
-  Future<void> levelUpHero(int id) async {
+  Future<void> levelUpHero(int heroId) async {
     // 여기에 영웅을 레벨 업하는 로직을 추가하세요
     await _database.rawUpdate(
-        'UPDATE hero SET hero_level = hero_level + 1 WHERE hero_id = ?', [id]);
-    print('Hero with ID $id leveled up');
+        'UPDATE hero SET hero_level = hero_level + 1 WHERE hero_id = ?',
+        [heroId]);
+    print('Hero with ID $heroId leveled up');
   }
 }
 
+// 레벨 업에 따른 damage 증가 sql // 또는 unity에서 받아오기
+
 void main() async {
-  // 예시: 클래스 인스턴스 생성 및 함수 호출
+  // 예시: 클래스 인스턴스 생성 및 함수 호기
   var heroDB = HeroDBProvider();
 
   await heroDB.initDB();
 
-  List<Map<String, dynamic>> allHeroes = await heroDB.getAllHero();
+  Map<String, dynamic> allHeroes = await heroDB.getHeroById(1);
   print('All Heroes: $allHeroes');
 
-  await heroDB.insertHero('NewHero', 1);
+  await heroDB.insertHero(1, 'warrior', 1, 1);
 
-  int heroID = 2;
+  int heroID = 1;
   await heroDB.levelUpHero(heroID);
 }
