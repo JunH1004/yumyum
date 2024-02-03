@@ -57,17 +57,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Codes/GameManager.cs" />
+    <Compile Include="Assets/Codes/gaugeadd.cs" />
     <Compile Include="Assets/Codes/Bullet.cs" />
     <Compile Include="Assets/FlutterUnityIntegration/UnityMessageManager.cs" />
+    <Compile Include="Assets/Codes/BroBoss.cs" />
     <Compile Include="Assets/FlutterUnityIntegration/SingletonMonoBehaviour.cs" />
+    <Compile Include="Assets/Codes/card.cs" />
+    <Compile Include="Assets/Codes/box.cs" />
     <Compile Include="Assets/FlutterUnityIntegration/NativeAPI.cs" />
     <Compile Include="Assets/Codes/Enemy.cs" />
-    <Compile Include="Assets/Codes/Hero.cs" />
-    <Compile Include="Assets/Codes/box.cs" />
-    <Compile Include="Assets/Codes/card.cs" />
-    <Compile Include="Assets/Codes/gaugeadd.cs" />
-    <Compile Include="Assets/Codes/BroBoss.cs" />
     <Compile Include="Assets/Codes/broBossBullet.cs" />
+    <Compile Include="Assets/Codes/Hero.cs" />
+    <Compile Include="Assets/Codes/VideoController.cs" />
+    <Compile Include="Assets/Codes/VideoHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
